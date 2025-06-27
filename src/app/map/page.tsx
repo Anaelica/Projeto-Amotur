@@ -1,6 +1,10 @@
 'use client'
 
 import Map from "@/components/Map"
+import dynamic from 'next/dynamic'
+
+const Mapa = dynamic(( ) => import('@/components/Map'),
+{ ssr: false})
 
 
 export default function MapPage() {
@@ -11,7 +15,7 @@ export default function MapPage() {
                 Click nos marcadores para ver 
                 os  detalhes dos locais
             </p>    
-           <Map/>
+           <Mapa/>
         </div>
     )
 } 
