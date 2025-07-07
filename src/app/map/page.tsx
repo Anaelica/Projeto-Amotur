@@ -26,17 +26,23 @@ export default function MapPage() {
     setInputValue('');
     setSearch(name);
   };
-
+  
   const handleEnter = () => {
     setSearch(inputValue);
     setInputValue('');
   };
-
+  
   return (
     <div className="relative w-full min-h-screen p-4 bg-gray-50">
-      <div className="flex justify-between items-center mb-4 px-4">
+      <div className="flex gap-[200px] items-center mb-4 px-4">
         <img src="/amotur.png" className="h-[80px] ml-17" alt="Logo AmoTur" />
 
+        <Filtros
+          localidade={localidade}
+          setLocalidade={setLocalidade}
+          categoria={categoria}
+          setCategoria={setCategoria}
+        />
         <SearchBar
           search={inputValue}
           setSearch={setInputValue}
@@ -46,12 +52,6 @@ export default function MapPage() {
         />
       </div>
 
-      <Filtros
-        localidade={localidade}
-        setLocalidade={setLocalidade}
-        categoria={categoria}
-        setCategoria={setCategoria}
-      />
 
       <Map search={search} setSearch={setSearch} filteredPoints={pontosFiltrados} />
     </div>
