@@ -3,26 +3,34 @@
 import { useState } from 'react';
 import Map from '@/components/Map';
 import SearchBar from '@/components/Barra';
-import { points, Point } from '@/components/Points';
+import { points, Point, PointsType, Localidade } from '@/components/Points';
+import Filtros from '@/components/Filtros';
 
 export default function MapPage() {
   const [search, setSearch] = useState('');
   const [inputValue, setInputValue] = useState('');
+  const [localidade, setLocalidade] = useState<Localidade | 'todas'>('todas');
+  const [categoria, setCategoria] = useState<PointsType | 'todas'>('todas');
 
-  const filteredSuggestions = points.filter((p) =>
+  const pontosFiltrados = points.filter((p) => {
+    const porLocalidade = localidade === 'todas' || p.localidade === localidade;
+    const porCategoria = categoria === 'todas' || p.type === categoria;
+    return porLocalidade && porCategoria;
+  });
+
+  const filteredSuggestions = pontosFiltrados.filter((p) =>
     p.name.toLowerCase().includes(inputValue.toLowerCase())
   );
 
   const handleSelect = (name: string) => {
-  setInputValue(''); // limpa o campo e esconde sugestões
-  setSearch(name);   // envia para o mapa
-};
+    setInputValue('');
+    setSearch(name);
+  };
 
-const handleEnter = () => {
-  setSearch(inputValue);
-  setInputValue(''); // limpa o campo e esconde sugestões
-};
-
+  const handleEnter = () => {
+    setSearch(inputValue);
+    setInputValue('');
+  };
 
   return (
     <div className="relative w-full min-h-screen p-4 bg-gray-50">
@@ -38,7 +46,14 @@ const handleEnter = () => {
         />
       </div>
 
-      <Map search={search} setSearch={setSearch} />
+      <Filtros
+        localidade={localidade}
+        setLocalidade={setLocalidade}
+        categoria={categoria}
+        setCategoria={setCategoria}
+      />
+
+      <Map search={search} setSearch={setSearch} filteredPoints={pontosFiltrados} />
     </div>
   );
-}
+}  

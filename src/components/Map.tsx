@@ -12,7 +12,7 @@ const iconHouse = new L.Icon({
 });
 
 const iconMap: Record<PointsType, L.Icon> = {
-  restaurant: new L.Icon({
+  villas: new L.Icon({
     iconUrl: '/restaurant-coffee-shop-svgrepo-com.png',
     iconSize: [40, 40],
     iconAnchor: [20, 40],
@@ -37,7 +37,7 @@ const iconMap: Record<PointsType, L.Icon> = {
   //   popupAnchor: [0, -40],
   // }),
     casas: iconHouse,
-    villas: iconHouse,
+    // villas: iconHouse,
 };
 
 function ConditionalMarkers({ points, search }: { points: Point[]; search: string }) {
@@ -97,9 +97,14 @@ useEffect(() => {
   );
 }
 
-export default function MapComponent({ search, setSearch }: {
+export default function MapComponent({
+  search,
+  setSearch,
+  filteredPoints,
+}: {
   search: string;
   setSearch: React.Dispatch<React.SetStateAction<string>>;
+  filteredPoints: Point[];
 }) {
   return (
     <div className="relative w-full h-[600px]">
@@ -113,9 +118,8 @@ export default function MapComponent({ search, setSearch }: {
           attribution="&copy; OpenStreetMap"
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <ConditionalMarkers points={points} search={search} />
+        <ConditionalMarkers points={filteredPoints} search={search} />
       </MapContainer>
     </div>
   );
 }
-

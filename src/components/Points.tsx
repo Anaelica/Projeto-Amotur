@@ -1,4 +1,32 @@
-export type PointsType = 'restaurant' | 'pousadas' | 'hotel' | 'casas' | 'villas';
+
+export type Localidade = 'icaraí' | 'moitas' | 'caetanos';
+
+export type PointsType =
+  | 'pousadas'
+  | 'hotel'
+  | 'casas'
+  | 'villas';
+//   | 'agencia-de-turismo'
+//   | 'bar'
+//   | 'restaurantes'
+//   | 'pizzaria'
+//   | 'sorveteria'
+//   | 'acai'
+//   | 'sanduiches'
+//   | 'comercios'
+//   | 'lojas'
+//   | 'kitesurf'
+//   | 'windsurf'
+//   | 'standup-paddle'
+//   | 'cursos'
+//   | 'trips'
+//   | 'services'
+//   | 'correspondencia-bancaria'
+//   | 'mecanico'
+//   | 'farmacia'
+//   | 'igreja'
+//   | 'escola';
+
 
 export type Point = {
   id: number;
@@ -7,6 +35,7 @@ export type Point = {
   image: string;
   description: string;
   type: PointsType;
+  localidade: Localidade;
 };
 
 export const points: Point[] = [
@@ -17,6 +46,7 @@ export const points: Point[] = [
     image: '/aloha-vilage.png',
     description: 'R Benedito Goncalves de Sousa, Icaraí de Amontada',
     type: 'pousadas',
+    localidade: 'icaraí',
   },
   {
     id: 2,
@@ -25,5 +55,6 @@ export const points: Point[] = [
     image: '/Casa florzinha.png',
     description: 'Rua da Praia, s.n - Icaraí, Amontada - CE.',
     type: 'casas',
+    localidade: 'icaraí',
   },
 ];
