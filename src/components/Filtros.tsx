@@ -18,7 +18,7 @@ export default function Filtros({ localidade, setLocalidade, categoria, setCateg
         className="p-2 text-sm rounded-xl shadow-xl w-[200px] bg-white text-black focus:outline-none focus:ring-2 focus:ring-black"
       >
         <option value="todas">Todas as localidades</option>
-        <option value="icaraí">Icaraí de Amontada</option>
+        <option value="icaraí">Icaraí</option>
         <option value="moitas">Moitas</option>
         <option value="caetanos">Caetanos</option>
       </select>
@@ -29,7 +29,7 @@ export default function Filtros({ localidade, setLocalidade, categoria, setCateg
         className="p-2 text-sm rounded-xl shadow-xl w-[200px] bg-white text-black focus:outline-none focus:ring-2 focus:ring-black "
       >
         <option value="todas">Todas as categorias</option>
-        <option value="restaurant">Restaurantes</option>
+        <option value="restaurantes">Restaurantes</option>
         <option value="pousadas">Pousadas</option>
         <option value="hotel">Hotéis</option>
         <option value="casas">Casas</option>

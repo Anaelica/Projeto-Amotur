@@ -34,6 +34,7 @@ export type PointsType =
   | 'trilha'
   | 'escola'
   | 'camping'
+  | 'hamburgueria'
   | 'centroCultural'
   | 'atracaoNatural'
   | 'riacho';
@@ -456,15 +457,15 @@ export const points: Point[] = [
   type: 'bar',
   localidade: 'icaraí'
 },
-// {
-//   id: 46,
-//   name: 'Adocica Bistrô',
-//   position: [-3.0242967054312198, -39.646688843322266],
-//   image: '',
-//   description: 'Praça dos Navegantes,307 loja2 Icaraí de Amontada, Amontada - CE, 62545-000 .',
-//   type: 'hamburgueria',
-//   localidade: 'icaraí'
-// },
+{
+  id: 46,
+  name: 'Adocica Bistrô',
+  position: [-3.0242967054312198, -39.646688843322266],
+  image: '',
+  description: 'Praça dos Navegantes,307 loja2 Icaraí de Amontada, Amontada - CE, 62545-000 .',
+  type: 'hamburgueria',
+  localidade: 'icaraí'
+},
 {
   id: 47,
   name: 'Nordestina restô',
@@ -654,121 +655,175 @@ export const points: Point[] = [
 //   type: 'agencia',
 //   localidade: 'icaraí'
 // },
+// {
+//   id: 68,
+//   name: 'Ilha das Ostras',
+//   position: [-3.0229692910376613, -39.698849302537471],
+//   image: '',
+//   description: 'Unnamed Road - Moitas, Amontada - CE, 62500-000',
+//   type: 'restaurantes',
+//   localidade: 'moitas'
+// },
+// {
+//   id: 69,
+//   name: 'Lagoa das Cobras',
+//   position: [-3.0186471598386198, -39.702936290893305],
+//   image: '',
+//   description: 'Ponto Turistico',
+//   type: 'atracaoNatural',
+//   localidade: 'moitas'
+// },
+// {
+//   id: 70,
+//   name: 'Cabana Por Do Sol',
+//   position: [-3.016450798011041, -39.70437395479516],
+//   image: '',
+//   description: 'Moitas, Amontada - CE, 62500-000',
+//   type: 'restaurantes',
+//   localidade: 'moitas'
+// },
+// {
+//   id: 71,
+//   name: 'Túnel do Rio Aracatiaçu',
+//   position: [-3.015090122857019, -39.708644031649705],
+//   image: '',
+//   description: 'Moitas, Amontada - CE, 62500-000',
+//   type: 'atracaoNatural',
+//   localidade: 'caetanos'
+// },
+// {
+//   id: 72,
+//   name: '@moitasencantos',
+//   position: [-3.005509526032531, -39.706020909726114],
+//   image: '',
+//   description: 'PvR. Prof. João Manoel Pereira - Moitas, Amontada - CE, 62543-000',
+//   type: 'agencia',
+//   localidade: 'moitas'
+// },
+// {
+//   id: 73,
+//   name: 'Pousada Laculá',
+//   position: [-3.001091028812027, -39.69871965356211],
+//   image: '',
+//   description: 'R. Beira Mar - Praia de, Amontada - CE, 62540-000',
+//   type: 'pousadas',
+//   localidade: 'moitas'
+// },
+// {
+//   id: 74,
+//   name: 'Restaurante Dona Jô',
+//   position: [-3.0013690284165873, -39.698742651655834],
+//   image: '',
+//   description: 'Rua Raimundo nonato Cipriano - Moitas, Amontada - CE, 62540-000',
+//   type: 'restaurantes',
+//   localidade: 'moitas'
+// },
+// {
+//   id: 75,
+//   name: 'Trilha do Vento Forte',
+//   position: [-3.0014371138200544, -39.69892332580956],
+//   image: '',
+//   description: 'R. Raimundo Nonato, 1-103 - Moitas, Amontada - CE, 62540-000',
+//   type: 'igreja',
+//   localidade: 'moitas'
+// },
+// {
+//   id: 76,
+//   name: 'Casa Velha', 
+//   position: [-3.001331233436963, -39.697043901435855],
+//   image: '',
+//   description: 'R. Francisco Cândido, 58 - 120, Amontada - CE, 62540-000',
+//   type: 'pousadas',
+//   localidade: 'moitas'
+// },
+// {
+//   id: 77,
+//   name: 'Pousada Caravelas Praia de Moitas - CE',
+//   position: [-3.0007757574371534, -39.697235200296056],
+//   image: '',
+//   description: 'Praia de Moitas - Moitas, Amontada - CE, 62540-000',
+//   type: 'pousadas',
+//   localidade: 'moitas'
+// },
+// {
+//   id: 78,
+//   name: 'Casa das Rendas',
+//   position: [-3.001148073219105, -39.69762948500284],
+//   image: '',
+//   description: 'R. Euríco Miguel dos Santos, 40 - Moitas, Amontada - CE, 62540-000',
+//   type: 'casas',
+//   localidade: 'moitas'
+// },
+// {
+//   id: 79,
+//   name: 'Comida no Alpendre',
+//   position: [-3.0045511574952126, -39.69704330438653],
+//   image: '',
+//   description: 'R. Prof. João Manoel Pereira - Moitas, Amontada - CE, 62540-000',
+//   type: 'restaurantes',
+//   localidade: 'moitas'
+// },
+// {
+//   id: 80,
+//   name: 'Conexão Bahia',
+//   position: [-2.999416478167884, -39.695509817478815],
+//   image: '',
+//   description: 'R. Beira Mar - Moitas, Amontada - CE, 62543-000',
+//   type: 'restaurantes',
+//   localidade: 'moitas'
+// },
+// {
+//   id: 81,
+//   name: 'Praia de Moitas Ceará',
+//   position: [-2.999791472936107, -39.6967865489119],
+//   image: '',
+//   description: 'Praia de - Moitas, Amontada - CE, 62500-000',
+//   type: 'praia',
+//   localidade: 'moitas'
+// },
+// {
+//   id: 82,
+//   name: 'Collina Beach - Pousada no Ceará',
+//   position: [-2.999791472936107, -39.6967865489119],
+//   image: '',
+//   description: 'R. Beira Mar - Praia de, Amontada - CE, 62543-000',
+//   type: 'pousadas',
+//   localidade: 'moitas'
+// },
+// {
+//   id: 83,
+//   name: 'Villa Pukara',
+//   position: [-2.9997892860441615, -39.69599847370195],
+//   image: '',
+//   description: 'R. Beira Mar, sn - Moitas, Amontada - CE, 62540-000',
+//   type: 'casas',
+//   localidade: 'moitas'
+// },
+// {
+//   id: 84,
+//   name: 'Barraca do Tio Cle',
+//   position: [-3.0010316309977974, -39.708029433222144],
+//   image: '',
+//   description: 'R. Beira Mar - Moitas, Amontada - CE, 62500-000',
+//   type: 'quiosque',
+//   localidade: 'moitas'
+// },
+// {
+//   id: 84,
+//   name: 'Foz do Rio Aracatiaçu',
+//   position: [-3.0010316309977974, -39.708029433222144],
+//   image: '',
+//   description: 'Unnamed Road, Amontada - CE, 62500-000',
+//   type: 'atracaoNatural',
+//   localidade: 'moitas'
+// },
 {
-  id: 68,
-  name: 'Feirinha de Moitas',
-  position: [-3.115, -39.321],
+  id: 84,
+  name: 'Encontro do rio com o mar - praia de moitas',
+  position: [-3.001685192259162, -39.708490773151745],
   image: '',
-  description: 'Feira com produtos artesanais e comidas típicas.',
-  type: 'praça',
+  description: 'Moitas, Amontada - CE, 62500-000',
+  type: 'atracaoNatural',
   localidade: 'moitas'
-},
-{
-  id: 69,
-  name: 'Casa Verde das Dunas',
-  position: [-3.143, -39.368],
-  image: '',
-  description: 'Hospedagem familiar próxima às dunas de Icaraí.',
-  type: 'pousadas',
-  localidade: 'icaraí'
-},
-{
-  id: 70,
-  name: 'Pousada Trilha do Vento',
-  position: [-3.140, -39.339],
-  image: '',
-  description: 'Hospedagem com foco em ecoturismo e esportes.',
-  type: 'pousadas',
-  localidade: 'icaraí'
-},
-{
-  id: 71,
-  name: 'Barraca Sabor da Praia',
-  position: [-3.160, -39.292],
-  image: '',
-  description: 'Comida caseira e frutos do mar na orla de Caetanos.',
-  type: 'barraca',
-  localidade: 'caetanos'
-},
-{
-  id: 72,
-  name: 'Praia das Pedrinhas',
-  position: [-3.158, -39.296],
-  image: '',
-  description: 'Praia com formações rochosas e piscinas naturais.',
-  type: 'praia',
-  localidade: 'caetanos'
-},
-{
-  id: 73,
-  name: 'Barraca Tia Maria',
-  position: [-3.134, -39.335],
-  image: '',
-  description: 'Barraca tradicional à beira da Lagoa de Flecheiras.',
-  type: 'barraca',
-  localidade: 'flecheiras'
-},
-{
-  id: 74,
-  name: 'Casa das Areias',
-  position: [-3.137, -39.342],
-  image: '',
-  description: 'Hospedagem em estilo rústico e minimalista.',
-  type: 'pousadas',
-  localidade: 'icaraí'
-},
-{
-  id: 75,
-  name: 'Trilha do Vento Forte',
-  position: [-3.152, -39.298],
-  image: '',
-  description: 'Trilha por áreas de dunas em regiões de vento intenso.',
-  type: 'trilha',
-  localidade: 'caetanos'
-},
-{
-  id: 76,
-  name: 'Restaurante Pé de Mangue', 
-  position: [-3.112, -39.331],
-  image: '',
-  description: 'Restaurante rústico com mesas sob árvores.',
-  type: 'restaurantes',
-  localidade: 'moitas'
-},
-{
-  id: 77,
-  name: 'Barraca do Nenzin',
-  position: [-3.159, -39.294],
-  image: '',
-  description: 'Ambiente familiar com pratos típicos de pescador.',
-  type: 'barraca',
-  localidade: 'caetanos'
-},
-{
-  id: 78,
-  name: 'Casa Duna Branca',
-  position: [-3.146, -39.369],
-  image: '',
-  description: 'Hospedagem entre as dunas, ideal para descanso.',
-  type: 'pousadas',
-  localidade: 'icaraí'
-},
-{
-  id: 79,
-  name: 'Barraca do Canto',
-  position: [-3.132, -39.334],
-  image: '',
-  description: 'Barraca em ponto mais isolado da Lagoa de Flecheiras.',
-  type: 'barraca',
-  localidade: 'flecheiras'
-},
-{
-  id: 80,
-  name: 'Casa Azul Marinho',
-  position: [-3.138, -39.343],
-  image: '',
-  description: 'Hospedagem charmosa no coração de Icaraí.',
-  type: 'pousadas',
-  localidade: 'icaraí'
 },
 ];

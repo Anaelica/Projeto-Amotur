@@ -21,13 +21,19 @@ const defaultIcon = new L.Icon({
 
 const iconHouse = new L.Icon({
   iconUrl: '/icon-casas.png',
+  iconSize: [50, 50],
+  iconAnchor: [25, 40],
+  popupAnchor: [0, -40],
+});
+const iconHamburgueria = new L.Icon({
+  iconUrl: '/icon-hamburgue.png',
   iconSize: [40, 40],
   iconAnchor: [25, 40],
   popupAnchor: [0, -40],
 });
 const restaurantes = new L.Icon({
-  iconUrl: '/icon-restaurantes.png',
-  iconSize: [30, 30],
+  iconUrl: '/restaurantes.png',
+  iconSize: [50, 65],
   iconAnchor: [25, 40],
   popupAnchor: [0, -40],
 });
@@ -46,7 +52,7 @@ const esportesAgua = new L.Icon({
 const mares = defaultIcon;
 const iconPousadas = new L.Icon({
   iconUrl: '/pousadas.png',
-  iconSize: [30,30],
+  iconSize: [45, 45],
   iconAnchor: [25, 40],
   popupAnchor: [0, -40],
 });
@@ -75,6 +81,7 @@ const iconMap: Record<PointsType, L.Icon> = {
     iconAnchor: [25, 40],
     popupAnchor: [0, -40],
   }),
+  hamburgueria: iconHamburgueria,
   barraca: restaurantes,
   casas: iconHouse,
   villas: iconHouse,
