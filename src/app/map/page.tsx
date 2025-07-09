@@ -1,10 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import Map from '@/components/Map';
 import SearchBar from '@/components/Barra';
 import { points, Point, PointsType, Localidade } from '@/components/Points';
 import Filtros from '@/components/Filtros';
+import dynamic from 'next/dynamic'
+
+const Map = dynamic(( ) => import('@/components/Map'),
+{ ssr: false})
 
 export default function MapPage() {
   const [search, setSearch] = useState('');
@@ -31,7 +34,7 @@ export default function MapPage() {
     setSearch(inputValue);
     setInputValue('');
   };
-  
+    
   return (
     <div className="relative w-full min-h-screen p-4 bg-gray-50">
       <div className="flex gap-[200px] items-center mb-4 px-4">
@@ -54,6 +57,7 @@ export default function MapPage() {
 
 
       <Map search={search} setSearch={setSearch} filteredPoints={pontosFiltrados} />
+      {/* <Car/> */}
     </div>
   );
 }  

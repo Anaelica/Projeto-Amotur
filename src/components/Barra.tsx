@@ -43,7 +43,7 @@ export default function SearchBar({
       </div>
 
       {search && suggestions.length > 0 && (
-        <ul className="mt-2 border rounded max-h-40 overflow-y-auto text-sm">
+        <ul className="mt-2 border rounded h-[60px] overflow-y-auto text-sm">
           {suggestions.map((sug) => (
             <li
               key={sug.id}

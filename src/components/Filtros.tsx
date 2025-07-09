@@ -44,15 +44,23 @@ export default function Filtros({ localidade, setLocalidade, categoria, setCateg
         <option value="lojas">Lojas</option>
         <option value="kitesurf">Kitesurf</option>
         <option value="windsurf">Windsuf</option>
-        <option value="standup-paddle">Standup Paddle</option>
-        <option value="cursos">Cursos</option>
-        <option value="trips">Trips</option>
-        <option value="services">Services</option>
+        <option value="rio">Rio</option>
+        <option value="praia">Praia</option>
+        <option value="lagoa">Lagoa</option>
+        <option value="servicos">Servicos</option>
         <option value="correspondencia-bancaria">Correspondência Bancaria</option>
         <option value="mecanico">Mecânico</option>
         <option value="farmacia">Farmácia</option>
         <option value="igreja">Igreja</option>
         <option value="escola">Escola</option>
+        <option value="clube">Clube</option>
+        <option value="museu">Museu</option>
+        <option value="trilha">Trilha</option>
+        <option value="barraca">Barraca</option>
+        <option value="riacho">Riacho</option>
+        <option value="camping">Camping</option>
+        <option value="centroCultural">Centro Cultural</option>
+        <option value="atracaoNatural">Atração Natural</option>
 
       </select>
     </div>
