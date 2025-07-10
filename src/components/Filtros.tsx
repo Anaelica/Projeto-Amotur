@@ -15,7 +15,7 @@ export default function Filtros({ localidade, setLocalidade, categoria, setCateg
       <select
         value={localidade}
         onChange={(e) => setLocalidade(e.target.value as Localidade | 'todas')}
-        className="p-2 text-sm rounded-xl shadow-xl w-[200px] bg-white text-black focus:outline-none focus:ring-2 focus:ring-black"
+        className="p-2 text-sm rounded-xl shadow-xl w-[200px] bg-white font-semibold text-gray-800 focus:outline-none focus:ring-2 focus:ring-black "
       >
         <option value="todas">Todas as localidades</option>
         <option value="icaraí">Icaraí</option>
@@ -26,10 +26,10 @@ export default function Filtros({ localidade, setLocalidade, categoria, setCateg
       <select
         value={categoria}
         onChange={(e) => setCategoria(e.target.value as PointsType | 'todas')}
-        className="p-2 text-sm rounded-xl shadow-xl w-[200px] bg-white text-black focus:outline-none focus:ring-2 focus:ring-black "
+        className="p-2 text-sm rounded-xl shadow-xl w-[200px] bg-white font-semibold text-gray-800 focus:outline-none focus:ring-2 focus:ring-black "
       >
         <option value="todas">Todas as categorias</option>
-        <option value="restaurantes">Restaurantes</option>
+        <option value="restaurantes | casas">Restaurantes</option>
         <option value="pousadas">Pousadas</option>
         <option value="hotel">Hotéis</option>
         <option value="casas">Casas</option>

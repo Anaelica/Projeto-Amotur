@@ -55,7 +55,7 @@ export const points: Point[] = [
   id: 1,
   name: 'Lagoa de Flecheiras',
   position: [-3.0638845404382, -39.65316221787964],
-  image: '',
+  image: '/fotos-points/flecheiras.jpeg',
   description: 'Lagoa ideal para banho e prática de esportes aquáticos em Flecheiras.',
   type: 'lagoa',
   localidade: 'flecheiras'
@@ -64,7 +64,7 @@ export const points: Point[] = [
   id: 2,
   name: 'Praia de Caetanos',
   position: [-3.0762421357947867, -39.56096517555089],
-  image: '',
+  image: '/fotos-points/praia-de-caetanos.png',
   description: 'Praia com ventos fortes, ideal para prática de kitesurf.',
   type: 'praia',
   localidade: 'caetanos'
@@ -73,7 +73,7 @@ export const points: Point[] = [
   id: 3,
   name: 'Croa dos Ventos',
   position: [-3.0631882862891424, -39.650086317879705],
-  image: '',
+  image: '/fotos-points/croa-dos-ventos (1).png',
   description: 'Túnel natural de vegetação à beira do rio Aracatiaçu.',
   type: 'atracaoNatural',
   localidade: 'moitas'
@@ -83,7 +83,7 @@ export const points: Point[] = [
   id: 4,
   name: 'Barraca O Paraíso',
   position: [-3.0646988896517935, -39.65121284558944],
-  image: '',
+  image: '/fotos-points/barraca-o-paraiso.png',
   description: 'Lagoa das Flexeiras - Icaraí, Amontada - CE, 62540-000',
   type: 'restaurantes',
   localidade: 'flecheiras'
@@ -92,65 +92,65 @@ export const points: Point[] = [
   id: 5,
   name: 'Barraca Do Marcelo',
   position: [-3.065180996659276, -39.652800713254116],
-  image: '',
+  image: '/fotos-points/barraca-do-marcelo.png',
   description: 'lagoa de Freixerinha, Icaraí de, Amontada - CE',
   type: 'bar',
   localidade: 'flecheiras'
 },
-{
-  id: 6,
-  name: 'Praça de Moitas',
-  position: [-3.0064364718754844, -39.68807159089327],
-  image: '',
-  description: 'Praça central com ponto de Wi-Fi grátis.',
-  type: 'praça',
-  localidade: 'moitas'
-},
+// {
+//   id: 6,
+//   name: 'Praça de Moitas',
+//   position: [-3.0064364718754844, -39.68807159089327],
+//   image: '',
+//   description: 'Praça central com ponto de Wi-Fi grátis.',
+//   type: 'praça',
+//   localidade: 'moitas'
+// },
 {
   id: 7,
   name: 'Duna do Pôr-do-Sol',
   position: [-3.024042605163356, -39.67210628904428],
-  image: '',
+  image: '/fotos-points/duna-por-do-sol.png',
   description: 'Duna famosa pelo pôr do sol sobre o rio e o mar.',
   type: 'atracaoNatural',
   localidade: 'icaraí'
 },
-// {
-//   id: 8,
-//   name: 'Umami Restaurant',
-//   position: [ -3.02890, -39.64926],
-//   image: '',
-//   description: 'Rua Noé Praciano - Icaraí, Amontada - CE, 62500-000',
-//   type: 'restaurantes',
-//   localidade: 'icaraí'
-// },
+{
+  id: 8,
+  name: 'Umami Restaurant',
+  position: [ -3.02890, -39.64926],
+  image: '/fotos-points/umami-residense.png',
+  description: 'Rua Noé Praciano - Icaraí, Amontada - CE, 62500-000',
+  type: 'restaurantes',
+  localidade: 'icaraí'
+},
 {
   id: 9,
   name: 'Canoé Brasil',
   position: [-3.002526771265445, -39.698506190893255],
-  image: '',
+  image: '/fotos-points/canoé-brasil.png',
   description: 'Pousada tradicional em Moitas.',
   type: 'pousadas',
   localidade: 'moitas'
 },
-{
-  id: 10,
-  name: 'Lagoa Sabiaguaba',
-  position: [-3.7716429674652314, -38.43632506020533],
-  image: '',
-  description: 'Lagoa em Caetanos de Cima com vegetação ao redor.',
-  type: 'lagoa',
-  localidade: 'caetanos'
-},
 // {
-//   id: 11,
-//   name: 'Restaurante Sabores de Minas',
-//   position: [-3.02798, -39.64644],
+//   id: 10,
+//   name: 'Lagoa Sabiaguaba',
+//   position: [-3.7716429674652314, -38.43632506020533],
 //   image: '',
-//   description: 'R. Jose Ribamar dos Santos Rodrigues - Icaraí, Amontada - CE, 62500-000',
-//   type: 'restaurantes',
-//   localidade: 'icaraí'
+//   description: 'Lagoa em Caetanos de Cima com vegetação ao redor.',
+//   type: 'lagoa',
+//   localidade: 'caetanos'
 // },
+{
+  id: 11,
+  name: 'Restaurante Sabores de Minas',
+  position: [-3.02798, -39.64644],
+  image: '',
+  description: 'R. Jose Ribamar dos Santos Rodrigues - Icaraí, Amontada - CE, 62500-000',
+  type: 'restaurantes',
+  localidade: 'icaraí'
+},
 {
   id: 12,
   name: 'Aima Ateliê',
@@ -655,15 +655,15 @@ export const points: Point[] = [
 //   type: 'agencia',
 //   localidade: 'icaraí'
 // },
-// {
-//   id: 68,
-//   name: 'Ilha das Ostras',
-//   position: [-3.0229692910376613, -39.698849302537471],
-//   image: '',
-//   description: 'Unnamed Road - Moitas, Amontada - CE, 62500-000',
-//   type: 'restaurantes',
-//   localidade: 'moitas'
-// },
+{
+  id: 68,
+  name: 'Ilha das Ostras',
+  position: [-3.0229692910376613, -39.698849302537471],
+  image: '',
+  description: 'Unnamed Road - Moitas, Amontada - CE, 62500-000',
+  type: 'restaurantes',
+  localidade: 'moitas'
+},
 // {
 //   id: 69,
 //   name: 'Lagoa das Cobras',
@@ -799,15 +799,15 @@ export const points: Point[] = [
 //   type: 'casas',
 //   localidade: 'moitas'
 // },
-// {
-//   id: 84,
-//   name: 'Barraca do Tio Cle',
-//   position: [-3.0010316309977974, -39.708029433222144],
-//   image: '',
-//   description: 'R. Beira Mar - Moitas, Amontada - CE, 62500-000',
-//   type: 'quiosque',
-//   localidade: 'moitas'
-// },
+{
+  id: 84,
+  name: 'Barraca do Tio Cle',
+  position: [-3.0010316309977974, -39.708029433222144],
+  image: '/fotos-points/tio-cle.png',
+  description: 'R. Beira Mar - Moitas, Amontada - CE, 62500-000',
+  type: 'restaurantes',
+  localidade: 'moitas'
+},
 // {
 //   id: 84,
 //   name: 'Foz do Rio Aracatiaçu',

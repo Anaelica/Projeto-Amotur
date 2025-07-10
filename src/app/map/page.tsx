@@ -65,7 +65,7 @@ export default function MapPage() {
         />
       </div>
 
-      <Map search={search} setSearch={setSearch} filteredPoints={pontosFiltrados} />
+      <Map search={search} setSearch={setSearch} filteredPoints={pontosFiltrados}/>
     </div>
   );
 }

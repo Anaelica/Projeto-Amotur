@@ -28,8 +28,9 @@ export default function SearchBar({
     if (e.key === 'Enter') onEnter();
   };
 
-  return (
-    <div className="text-black bg-white rounded-xl shadow-xl w-[280px] px-3 py-2">
+  return ( //        className="p-2 text-sm rounded-xl shadow-xl w-[200px] bg-white font-semibold text-gray-800 focus:outline-none focus:ring-2 focus:ring-black "
+
+    <div className="font-semibold text-gray-700 bg-white rounded-xl shadow-xl w-[280px] px-3 py-2">
       <div className="flex items-center">
         <input
           type="text"
@@ -43,7 +44,7 @@ export default function SearchBar({
       </div>
 
       {search && suggestions.length > 0 && (
-        <ul className="mt-2 border rounded h-[60px] overflow-y-auto text-sm">
+        <ul className="mt-2 h-[60px] overflow-y-auto text-sm">
           {suggestions.map((sug) => (
             <li
               key={sug.id}
