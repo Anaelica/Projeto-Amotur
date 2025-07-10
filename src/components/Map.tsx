@@ -11,6 +11,8 @@ import { useEffect, useRef, useState } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { points, Point, PointsType } from '@/components/Points';
+import { Carousel } from 'primereact/carousel';
+        
 
 const defaultIcon = new L.Icon({
   iconUrl: '/default.png',
